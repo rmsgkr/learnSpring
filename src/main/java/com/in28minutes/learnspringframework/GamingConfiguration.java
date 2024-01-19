@@ -15,11 +15,10 @@ public class GamingConfiguration {
 		var game = new PacmanGame();
 		return game;
 	}
-//	var game = new MarioGame();
-//	var game = new SuperContraGame();
-
 	
-
-//	var gameRunner = new GameRunner(game);
-//	gameRunner.run();
+	@Bean
+	public GameRunner gameRunner(GamingConsole game) {
+		var gameRunner = new GameRunner(game);
+		return gameRunner;
+	}
 }

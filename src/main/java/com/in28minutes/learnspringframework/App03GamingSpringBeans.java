@@ -17,17 +17,9 @@ public class App03GamingSpringBeans {
 					new AnnotationConfigApplicationContext
 						(GamingConfiguration.class)){
 			context.getBean(GamingConsole.class).up();
-		};
-		
-		
-//		var game = new MarioGame();
-//		var game = new SuperContraGame();
-
-//		var game = new PacmanGame();
-//
-//		var gameRunner = new GameRunner(game);
-//		gameRunner.run();
-
+			context.getBean(GameRunner.class).run();
+			
+		}
 	}
 
 }
